@@ -59,7 +59,7 @@ public class PayController {
             ) {
         String localSign = DigestUtils.md5DigestAsHex(
                 String.format(
-                        "Amount=%d&AppKey=1c65cef3dfd1e00c0b03923a1c591db4&Channel=%d&MerchantReferenceNumber=%s&OriginAmount=%d&Key=d01c2326ffe3d0841720e480635625e6d13dd49ced357e0a0954836c7d3944e2",
+                        "Amount=%d&AppKey=778609db5dc7e1a8315717a9cdd8fd6f&Channel=%d&MerchantReferenceNumber=%s&OriginAmount=%d&Key=d01c2326ffe3d0841720e480635625e6d13dd49ced357e0a0954836c7d3944e2",
                         amount,
                         channel,
                         mrn,

@@ -6,7 +6,7 @@
     <title>正在跳转到支付页面...</title>
 </head>
 <body>
-<form method="post" id="sendRequestForm" enctype="application/x-www-form-urlencoded" action="http://pay.tj9999.vip/api/Pay/Channel">
+<form method="post" id="sendRequestForm" enctype="application/x-www-form-urlencoded" action="https://pay.tj9999.vip/api/Pay/Create">
     <input type="hidden" name="Amount" value="${payRequest.amount}" />
     <input type="hidden" name="AppKey" value="${payRequest.appKey}" />
     <input type="hidden" name="CallBackUrl" value="${payRequest.callbackUrl}"/>
