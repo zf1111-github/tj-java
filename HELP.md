@@ -71,6 +71,14 @@ HTTP WebAPI 请求
 
 `GET /api/Payment/Query?AppKey=商户Key&MerchantReferenceNumber=平台单号&Sign=签名`
 
+签名格式
+
+`AppKey=商户Key&MerchantReferenceNumber=平台单号&Key=商户密钥`
+
+>其中**商户密钥**为商户接口的密钥信息，如果不清楚请联系客服
+
+签名为以上数据格式的MD5哈希以后16个字节的HEX小写字符串
+
 JSON 响应内容
 
 `{merchantReferenceNumber: 平台单号, status: 1/2/3}`
@@ -162,3 +170,23 @@ status 为1时表示等待客人支付，2表示支付成功，3表示支付失�
 ### 下发回调说明
 
 BBC平台将所有的充值参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到充值时所留下的notifyUrl参数所指定的地址中，IP白名单请联系客服，回调成功时，商户应返回HTTP Status 200并以`success`字样作为响应内容。
+
+### 下发查单接口说明
+
+HTTP WebAPI 请求
+
+`GET /api/Merchant/QueryPayout?AppKey=商户Key&MerchantReferenceNumber=平台单号&Sign=签名`
+
+签名格式
+
+`AppKey=商户Key&MerchantReferenceNumber=平台单号&Key=商户密钥`
+
+>其中**商户密钥**为商户接口的密钥信息，如果不清楚请联系客服
+
+签名为以上数据格式的MD5哈希以后16个字节的HEX小写字符串
+
+JSON 响应内容
+
+`{merchantReferenceNumber: 平台单号, status: 1/2/3}`
+
+status 为1时表示等待下发，2表示下发成功，3表示下发失败。如果返回的status是2，那么BBC平台会再次回调notifyUrl，请参考下发回调说明。
