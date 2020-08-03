@@ -81,7 +81,7 @@ HTTP WebAPI 请求
 
 JSON 响应内容
 
-`{merchantReferenceNumber: 平台单号, status: 1/2/3}`
+`{error: "success", "result": {merchantReferenceNumber: "平台单号", status: 1/2/3}}`
 
 status 为1时表示等待客人支付，2表示支付成功，3表示支付失败。如果返回的status是2，那么BBC平台会再次回调notifyUrl，请参考充值回调说明。
 
@@ -187,6 +187,6 @@ HTTP WebAPI 请求
 
 JSON 响应内容
 
-`{merchantReferenceNumber: 平台单号, status: 1/2/3}`
+`{error: "success", "result": {merchantReferenceNumber: "平台单号", status: 1/2/3}}`
 
 status 为1时表示等待下发，2表示下发成功，3表示下发失败。如果返回的status是2，那么BBC平台会再次回调notifyUrl，请参考下发回调说明。
