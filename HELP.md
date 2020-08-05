@@ -30,7 +30,7 @@
 
 ### WebAPI 对接模式
 
-将所有的充值接口参数按照`application/json`以JSON对象的形式用POST方式提交到BBC的网关API `/api/Pay/Create`，该接口将返回以下信息（JSON对象）
+将所有的充值接口参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到BBC的网关API `/api/Pay/Create`，该接口将返回以下信息（JSON对象）
 
 `{
     success: true/false,
