@@ -6,6 +6,7 @@ $request = array (
     'MerchantReferenceNumber' => $_GET['MerchantReferenceNumber']
 );
 ksort($request);
+$secret = 'd01c2326ffe3d0841720e480635625e6d13dd49ced357e0a0954836c7d3944e2';
 $signContent = '';
 foreach ($request as $key => $value) {
     $signContent .= "$key=$value&";
