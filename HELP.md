@@ -13,7 +13,7 @@
 |CallBackUrl|是|客人充值完成后用于返回的网址|
 |NotifyUrl|是|充值成功后的回调接口，请求部分请参考回调参数说明|
 |Sign|是|请求信息的签名信息，请参考充值接口签名说明|
-|Payer|否|充值者的账户实名信息，注意，该参数为可选，不参与签名|
+|Payer|否|充值者的账户实名信息，注意，该参数为可选，不参与签名。如果有中文，请使用UTF-8编码|
 
 ### 充值接口签名说明
 
@@ -27,7 +27,7 @@
 
 ### 页面对接模式
 
-页面对接模式即是将所有的充值接口参数按照`application/x-www-form-urlencoded`表单以POST方式提交到BBC的网关API `/api/Pay/Channel`，提交以后网页的控制权交与BBC充值平台。
+页面对接模式即是将所有的充值接口参数按照`application/x-www-form-urlencoded`表单使用UTF-8编码以POST方式提交到BBC的网关API `/api/Pay/Channel`，提交以后网页的控制权交与BBC充值平台。
 
 ### WebAPI 对接模式
 
